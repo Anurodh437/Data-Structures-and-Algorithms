@@ -10,7 +10,7 @@ public class Node<E> {
    private final E data;
 
    //this variable will have node of type E which will store link to the next.
-   private Node<E> next;
+   public Node<E> next;
 
    //Constructor to use in case when we want to create a new node and we have data only.
    public Node(E data){
