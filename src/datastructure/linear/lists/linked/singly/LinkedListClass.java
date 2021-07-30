@@ -1,16 +1,17 @@
-package linked;
+package datastructure.linear.lists.linked.singly;
 
 import abstractdatatype.AbstractDataType;
-import node.Node;
+import datastructure.linear.lists.linked.singly.node.Node;
+
 
 public class LinkedListClass<E> implements AbstractDataType<E> {
-    /* This head reference variable will store the reference value for the first node object in the linked list
+    /* This head reference variable will store the reference value for the first node object in the datastructure.linked list
     And has to be kept track in case if changed.
      */
     private Node<E> head = null;
 
     /*
-    This size variable will keep the count of the total number of nodes in the linked list except the head node.
+    This size variable will keep the count of the total number of nodes in the datastructure.linked list except the head node.
      */
     private int size;
 
@@ -20,10 +21,10 @@ public class LinkedListClass<E> implements AbstractDataType<E> {
         return true;
     }
     /**
-     * This method will add an item node in the linked list at the given item.
+     * This method will add an item node in the datastructure.linked list at the given item.
      *
-     * @param index The index of the linked list at which the node is to be added.
-     * @param item  The data value of the node to be created and added to the linked list.
+     * @param index The index of the datastructure.linked list at which the node is to be added.
+     * @param item  The data value of the node to be created and added to the datastructure.linked list.
      * @throws IndexOutOfBoundsException If the index is negative or greater than the size.
      */
     public void add(int index, E item){
@@ -37,7 +38,7 @@ public class LinkedListClass<E> implements AbstractDataType<E> {
         }
     }
     /*
-    This method will add an item node to the beginning of the linked list.
+    This method will add an item node to the beginning of the datastructure.linked list.
      */
     private void addFirst(E data){
         head = new Node<>(data,head);
@@ -49,13 +50,13 @@ public class LinkedListClass<E> implements AbstractDataType<E> {
         */
     }
     /**
-     * This method will add an item node after a given node in the linked list.
+     * This method will add an item node after a given node in the datastructure.linked list.
      * Similar to the addFirst() method, this method also receives only the data value, so we
-     * would have create a node and then send it to the linked list to be added after the
+     * would have create a node and then send it to the datastructure.linked list to be added after the
      * given node.
      *
      * @param node The node after which the new node is to be added.
-     * @param item The data value of the node to be created and added to the linked list.
+     * @param item The data value of the node to be created and added to the datastructure.linked list.
      */
     private void addAfter(Node<E> node, E item){
         /*
@@ -71,7 +72,7 @@ public class LinkedListClass<E> implements AbstractDataType<E> {
 
     @Override
     public E remove() {
-        // if the index for removal of a node is not specified, just remove the first node in the linked list
+        // if the index for removal of a node is not specified, just remove the first node in the datastructure.linked list
         // the operation will always be O(1).
         return remove(0);
     }
@@ -88,7 +89,7 @@ public class LinkedListClass<E> implements AbstractDataType<E> {
         }
     }
     /**
-     * This method will remove the first node from the linked list.
+     * This method will remove the first node from the datastructure.linked list.
      *
      * @return The removed node's data or null if the list was empty.
      */
@@ -103,7 +104,7 @@ public class LinkedListClass<E> implements AbstractDataType<E> {
     }
 
     /**
-     * This method will remove a node after the given node in the linked list.
+     * This method will remove a node after the given node in the datastructure.linked list.
      *
      * @param previousNode The node after which the node is to be deleted.
      * @return the node's data that was deleted or null if there was no node.
@@ -119,16 +120,16 @@ public class LinkedListClass<E> implements AbstractDataType<E> {
         return removedValue;
     }
     /**
-     * This method will return a node at the specified index from the linked list.
+     * This method will return a node at the specified index from the datastructure.linked list.
      *
-     * @param index An non-negative index from the linked list.
+     * @param index An non-negative index from the datastructure.linked list.
      * @return The node at the specified index.
      */
     private Node<E> getNode(int index) {
         Node<E> currentNode = head;
         /*
-         * using a loop to traverse the whole linked list,
-         * the loop will run until i is less than the size of the linked list,
+         * using a loop to traverse the whole datastructure.linked list,
+         * the loop will run until i is less than the size of the datastructure.linked list,
          * AND
          * the current node traversed is not equal to null.
          * */
@@ -138,7 +139,7 @@ public class LinkedListClass<E> implements AbstractDataType<E> {
         }
         return currentNode;
     }
-    // This method is used to get size of the linked list.
+    // This method is used to get size of the datastructure.linked list.
     public int size(){
         return size;
     }

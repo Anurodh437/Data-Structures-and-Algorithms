@@ -1,4 +1,4 @@
-import linked.LinkedListClass;
+import datastructure.linked.LinkedListClass;
 
 public class Main {
     public static void main(String[] args) {

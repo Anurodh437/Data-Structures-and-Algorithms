@@ -1,4 +1,4 @@
-package node;
+package datastructure.linear.lists.linked.singly.node;
 
 /*This Node class is generated or created as generic so that it is possible to create classes that work with different data types.
 reference type(pre-defined or user-defined) in java.
